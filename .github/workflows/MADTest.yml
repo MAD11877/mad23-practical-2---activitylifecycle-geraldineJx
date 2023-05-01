@@ -25,6 +25,10 @@ jobs:
           go-version: '1.13.7'
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+
+      - name: Check JDK
+        run: |
+          ls /usr/lib/jvm/
   
       - name: Run Android Tests
         run: ./gradlew test
