@@ -31,7 +31,7 @@ jobs:
           ls /usr/lib/jvm/
   
       - name: Run Android Tests
-        run: ./gradlew -PenvironmentName=server test
+        run: ./gradlew test -Dorg.gradle.java.home=/usr/lib/jvm/temurin-17-jdk-amd64
         
       - name: Build Project
-        run: ./gradlew -PenvironmentName=server assemble
+        run: ./gradlew assemble -Dorg.gradle.java.home=/usr/lib/jvm/temurin-17-jdk-amd64
